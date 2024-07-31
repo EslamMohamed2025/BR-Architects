@@ -1,0 +1,1020 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+ *{
+    margin: 0;
+    padding: 0;
+ }
+
+.container{
+ width: 90%;
+ margin: 100px auto;
+ }
+
+ /* my-content */
+.my-content {
+  display: none;
+   /* Initially hide content */
+}
+
+/* loader  */
+:root {
+  --effect: hover 1s linear infinite;
+}
+
+
+.loader {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 81, 156, 0.667);
+  align-items: center;
+  justify-content: center;
+}
+
+.load {
+  text-align: center;
+}
+
+.load-p {
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4em;
+  font-family: arial;
+  font-weight: 600;
+  transform: scale(.5);
+  color: rgba(0, 81, 156, 0.667);
+  -webkit-text-stroke: 2px rgba(0, 81, 156, 0.667);
+}
+
+.load-p:nth-child(1) {
+  animation: var(--effect);
+}
+
+.load-p:nth-child(2) {
+  animation: var(--effect) .125s;
+}
+
+.load-p:nth-child(3) {
+  animation: var(--effect) .25s;
+}
+
+.load-p:nth-child(4) {
+  animation: var(--effect) .375s;
+}
+
+.load-p:nth-child(5) {
+  animation: var(--effect) .5s;
+}
+
+.load-p:nth-child(6) {
+  animation: var(--effect) .675s;
+}
+
+.load-p:nth-child(7) {
+  animation: var(--effect) .75s;
+}
+
+@keyframes hover {
+  0% {
+    transform: scale(.5);
+    color: #ffff;
+    -webkit-text-stroke: 2px #ffff;
+  }
+
+  20% {
+    transform: scale(1);
+    color: pink;
+    -webkit-text-stroke: 3px #ffff;
+    filter: drop-shadow(0 0 1px #ffff)drop-shadow(0 0 1px #ffff)drop-shadow(0 0 3px #ffff)drop-shadow(0 0 5px #ffff)hue-rotate(10turn);
+  }
+
+  50% {
+    transform: scale(.5);
+    color: #ffff;
+    -webkit-text-stroke: 2px #ffff;
+  }
+
+}
+
+
+/* button up  */
+
+#scrollUpBtn {
+  display: none; 
+  /* Hide the button by default */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+    nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 60px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;  
+   position: fixed;
+   width: 93%;
+   z-index: 200;
+    }
+
+    nav h2{
+    font-size: 18px;
+    position: relative;
+    left: -35px;
+    }
+    nav ul {
+    display: flex;
+    position: relative;
+    list-style: none;
+    left: 460px;
+    gap: 30px;
+    color: #000;
+    }
+
+    nav ul li a , .open ul li a{
+    color:#000;
+    text-decoration: none;
+    cursor: pointer;
+    }
+
+.color-white{
+color:#fff;
+ }
+
+ 
+ .dark{
+   color: #fff;
+ background-color: #000;
+ nav ul li a{
+   color: #fff;
+}
+header div ul li a{
+color: #fff;
+}
+header div {
+background: #000;
+}
+}
+
+.color-black{
+color: #000;
+transition: 0.5s;
+}
+            
+nav .moon{
+font-size: 26px;
+cursor: pointer;
+position: relative;
+left: 240px;
+}
+nav .sun{
+  font-size: 26px;
+ cursor: pointer;
+ display: none;
+ position: relative;
+ left: 240px;
+ animation: eslam  infinite 2.9s linear ;
+}
+
+@keyframes eslam {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}  
+       
+ .open{
+ position: fixed;
+ top: 51.5px;
+ right: 5px;
+ background-color: #fff;
+ border-radius: 50%;
+ padding: 20px;
+ text-align: center;
+ display: none;
+ z-index: 100;
+ }
+
+.nwn{
+display:flex;
+ }
+
+ .open ul {
+    list-style: none;
+ }
+ 
+/* menu icon */
+
+.hamburger {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  align-self: flex-end;
+  height: 2px;
+  width: 100%;
+  background: #000;
+  background-color: #000;
+}
+.hamburger .meat {
+  width: 100%;
+  transition: all 200ms ease-in-out;
+}
+.hamburger .bottom-bun {
+  width: 100%;
+  transition: all 400ms ease-in-out;
+}
+.hamburger:hover div {
+  width: 100%;
+}
+.hamburger:hover .top-bun {
+  -webkit-animation: burger-hover 1s infinite ease-in-out alternate;
+          animation: burger-hover 1s infinite ease-in-out alternate;
+}
+.hamburger:hover .meat {
+  -webkit-animation: burger-hover 1s infinite ease-in-out alternate forwards 200ms;
+          animation: burger-hover 1s infinite ease-in-out alternate forwards 200ms;
+  width: 75%;
+
+}
+.hamburger:hover .bottom-bun {
+  -webkit-animation: burger-hover 1s infinite ease-in-out alternate forwards 400ms;
+          animation: burger-hover 1s infinite ease-in-out alternate forwards 400ms;
+          width: 50%;
+
+}
+
+@keyframes burger-hover {
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* header */
+  header{
+  background-image: url(../imgs/header.jpg);
+  height: 90Vh;
+  background-size: cover;
+  object-fit: cover;
+  position: relative;
+  top: 54px;
+  overflow-x: hidden;
+  }
+
+  header h1{
+  position: absolute;
+  top: 320px;
+  left: 619px;
+  font-size: 40px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #fff;
+  }
+ 
+  header h1 span{
+  color: #fff;
+  background-color: #000;
+  border: 10px;
+  padding: 5px;
+  border-radius: 8px;
+  opacity: 0.5;
+  }
+
+  /* project  */
+
+    .projects h2{
+    margin-bottom: 50px;
+    }
+
+    .projects-content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    }
+
+    .projects-content .project{
+    width: 24%;
+    position: relative;
+    }
+
+    .projects-content .project img{
+        width: 100%;
+    }
+
+    .projects-content .project p{
+        background-color: #000;
+        color: #fff;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+    }
+
+    /* about */
+    .about .main-p{
+        margin: 30px 0;
+        line-height: 1.5;
+    }
+
+    .about-content{
+        display: flex;
+        gap: 10px;
+    } 
+
+    .about-content .char{
+        width: 24%;
+    }
+
+    .about-content .char img{
+        width: 100%;
+    }
+
+    .about-content .char >*{
+        margin-top: 10px;
+    }
+
+    .about-content .char h4{
+        opacity: 0.5;
+        line-height: 1.5;
+    }
+
+    .about-content .char button{
+        width: 100%;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        transition: 0.5s;
+    }
+
+    .about-content .char button:hover{
+    background-color:#ddd;
+    }
+
+    /* contact */
+    .contact >*{
+        margin: 20px  8px;
+    }
+
+    .contact form input{
+    width: 93%;
+    margin-top: 10px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid gray;
+    }
+
+    .contact button{
+    background-color: #000;
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    }
+
+    .contact button:hover{
+    background-color:#ccc;
+    color:#000;
+    transform: 2ss;
+    }
+
+    /* map */
+    .map iframe{
+        width: 100%;
+        height: 100vh;
+    }
+
+    /* footer */
+    footer{
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        padding: 50px;
+    }
+
+    footer h5{
+        color: #fff;
+        bottom: 10px;
+    }
+
+    footer a{
+        color: #fff;
+    }
+
+    
+    @media screen and (max-width: 480px) {
+    .container{
+        width: 90%;
+        margin: 100px auto;
+    }
+    
+    nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px ;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;  
+    position: fixed;
+    width:100%;
+     z-index: 100;
+    }
+
+    nav h2{
+    font-size: 20px;
+    position: relative;
+    left: 5px;
+    }
+    nav ul {
+    display: flex;
+    position: relative;
+    list-style: none;
+    left: 460px;
+    gap: 30px;
+    color: #000;
+    }
+
+    nav ul li a , .open ul li a{
+    color:#000;
+    text-decoration: none;
+    cursor: pointer;
+    }
+
+.color-white{
+color:#fff;
+ transition: 0.5s;
+ }
+       
+ nav .moon{
+ font-size: 26px;
+ cursor: pointer;
+ position: relative;
+ left: -140px;
+margin-left: -30px;
+}
+
+nav .sun{
+ font-size: 26px;
+ cursor: pointer;
+ display: none;
+ position: relative;
+ animation: eslam  infinite 2.9s linear;
+ left: -140px;
+margin-left: -30px;
+}
+          
+.open{
+  position: fixed;
+  top: 86px;
+  right: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 15px;
+  text-align: center;
+  display: none;
+  z-index: 100;
+  }
+
+  
+ .hamburger {
+  position: absolute;
+  right: 60px;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 18px;
+  /* cursor: pointer; */
+  /* z-index: 100; */
+}
+
+.hamburger div {
+  align-self: flex-end;
+  height: 2px;
+  width: 100%;
+  background: #000;
+  background-color: #000;
+}
+.hamburger .meat {
+  width: 100%;
+  transition: all 200ms ease-in-out;
+}
+.hamburger .bottom-bun {
+  width: 100%;
+  transition: all 400ms ease-in-out;
+}
+.hamburger:hover div {
+  width: 100%;
+}
+.hamburger:hover .top-bun {
+  -webkit-animation: burger-hover 1s infinite ease-in-out alternate;
+  animation: burger-hover 1s infinite ease-in-out alternate;
+}
+.hamburger:hover .meat {
+  -webkit-animation: burger-hover 1s infinite ease-in-out alternate forwards 200ms;
+  animation: burger-hover 1s infinite ease-in-out alternate forwards 200ms;
+  width: 75%;
+  
+}
+.hamburger:hover .bottom-bun {
+  -webkit-animation: burger-hover 1s infinite ease-in-out alternate forwards 400ms;
+          animation: burger-hover 1s infinite ease-in-out alternate forwards 400ms;
+          width: 50%;
+        }
+        
+@keyframes burger-hover {
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.nwn{
+ display:flex;
+}  
+
+/* header */
+  header{
+  background-image: url(../imgs/header.jpg);
+  height: 88vh;
+  background-size: cover;
+  object-fit: cover;
+  position: relative;
+  top: 87px;
+  overflow-x: hidden;
+  }
+
+  header h1{
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  font-size: 33px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #fff;
+  }
+ 
+  header h1 span{
+  color: #fff;
+  background-color: #000;
+  border: 10px;
+  padding: 5px;
+  border-radius: 8px;
+  opacity: 0.5;
+  }
+
+  /* project  */
+
+    .projects h2{
+    margin-bottom: 50px;
+    }
+
+    .projects-content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    }
+
+    .projects-content .project{
+    width: 100%;
+    position: relative;
+    }
+
+    .projects-content .project img{
+        width: 100%;
+    }
+
+    .projects-content .project p{
+        background-color: #000;
+        color: #fff;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+    }
+
+    /* about */
+    .about .main-p{
+        margin: 30px 0;
+        line-height: 1.3;
+
+    }
+
+    .about-content{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    } 
+
+    .about-content .char{
+        width: 100%;
+    }
+
+    .about-content .char img{
+        width: 100%;
+    }
+
+    .about-content .char >*{
+        margin-top: 10px;
+    }
+
+    .about-content .char h4{
+        opacity: 0.5;
+        line-height: 1.5;
+    }
+
+    .about-content .char button{
+        width: 100%;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        transition: 0.5s;
+    }
+
+    .about-content .char button:hover{
+    background-color:#ddd;
+    }
+
+    /* contact */
+    .contact >*{
+        margin: 20px  8px;
+    }
+
+    .contact form input{
+    width: 93%;
+    margin-top: 10px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid gray;
+    }
+
+    .contact button{
+    background-color: #000;
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    }
+
+    .contact button:hover{
+    background-color:#ccc;
+    color:#000;
+    transform: 2ss;
+    }
+
+    /* map */
+    .map iframe{
+        width: 100%;
+        height: 100vh;
+    }
+
+    /* footer */
+    footer{
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        padding: 50px;
+        
+    }
+
+    footer h5{
+        color: #fff;
+        bottom: 10px;
+    }
+
+    footer a{
+        color: #fff;
+    }
+
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .container{
+            width: 90%;
+            margin: 100px auto;
+        }
+        
+        nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;  
+        position: fixed;
+        width:100%;
+         z-index: 100;
+          /* gap: 5px; */
+        }
+    
+        nav h2{
+        font-size: 20px;
+        position: relative;
+        left: 5px;
+        }
+        nav ul {
+        display: flex;
+        position: relative;
+        list-style: none;
+        left: 170px;
+        gap: 10px;
+        color: #000;
+        }
+        nav ul li a{
+        font-size: 15px;
+        }
+        nav ul li a , .open ul li a{
+        color:#000;
+        text-decoration: none;
+        cursor: pointer;
+        }
+        header{
+          background-image: url(../imgs/header.jpg);
+          height: 90vh;
+          background-size: cover;
+          object-fit: cover;
+          position: relative;
+          margin-bottom: 50px;
+          /* overflow-x: hidden; */
+          }
+    .color-white{
+    color:#fff;
+     transition: 0.5s;
+     }
+           
+     nav .moon{
+     font-size: 26px;
+     cursor: pointer;
+     position: relative;
+     left: -60px;
+    margin-left: 16px;
+    }
+    
+    nav .sun{
+     font-size: 26px;
+     cursor: pointer;
+     display: none;
+     position: relative;
+     left: -60px;
+     animation: eslam  infinite 2.9s linear;
+    margin-left: 16px;
+    }
+              
+    .open{
+      position: fixed;
+      top: 86px;
+      right: 5px;
+      background-color: #fff;
+      border-radius: 50%;
+      padding: 15px;
+      text-align: center;
+      display: none;
+      z-index: 100;
+      }
+    
+      
+     .hamburger {
+      position: absolute;
+      right: 50px;
+      display: flex;
+      align-self: center;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 25px;
+      height: 18px;
+      /* cursor: pointer; */
+      /* z-index: 100; */
+    }
+    
+    .hamburger div {
+      align-self: flex-end;
+      height: 2px;
+      width: 100%;
+      background: #000;
+      background-color: #000;
+    }
+    .hamburger .meat {
+      width: 100%;
+      transition: all 200ms ease-in-out;
+    }
+    .hamburger .bottom-bun {
+      width: 100%;
+      transition: all 400ms ease-in-out;
+    }
+    .hamburger:hover div {
+      width: 100%;
+    }
+    .hamburger:hover .top-bun {
+      -webkit-animation: burger-hover 1s infinite ease-in-out alternate;
+      animation: burger-hover 1s infinite ease-in-out alternate;
+    }
+    .hamburger:hover .meat {
+      -webkit-animation: burger-hover 1s infinite ease-in-out alternate forwards 200ms;
+      animation: burger-hover 1s infinite ease-in-out alternate forwards 200ms;
+      width: 75%;
+      
+    }
+    .hamburger:hover .bottom-bun {
+      -webkit-animation: burger-hover 1s infinite ease-in-out alternate forwards 400ms;
+              animation: burger-hover 1s infinite ease-in-out alternate forwards 400ms;
+              width: 50%;
+            }
+            
+    @keyframes burger-hover {
+      0% {
+        width: 100%;
+      }
+      50% {
+        width: 50%;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+    .nwn{
+     display:flex;
+    }  
+    
+    /* header */
+      header{
+      background-image: url(../imgs/header.jpg);
+      height: 88vh;
+      background-size: cover;
+      object-fit: cover;
+      position: relative;
+      top: 87px;
+      overflow-x: hidden;
+      }
+    
+      header h1{
+      position: absolute;
+      top: 40%;
+      left: 30%;
+      font-size: 33px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: #fff;
+      }
+     
+      header h1 span{
+      color: #fff;
+      background-color: #000;
+      border: 10px;
+      padding: 5px;
+      border-radius: 8px;
+      opacity: 0.5;
+      }
+    
+      /* project  */
+    
+        .projects h2{
+        margin-bottom: 50px;
+        }
+    
+        .projects-content{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        }
+    
+        .projects-content .project{
+        width: 22%;
+        position: relative;
+        }
+    
+        .projects-content .project img{
+            width: 100%;
+        }
+    
+        .projects-content .project p{
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            position: absolute;
+            top: 0;
+        }
+    
+        /* about */
+        .about .main-p{
+            margin: 30px 0;
+            line-height: 1.3;
+    
+        }
+    
+        .about-content{
+            display: flex;
+          flex-wrap: wrap;            
+            gap: 10px;
+        } 
+    
+        .about-content .char{
+            width: 22%;
+        }
+    
+        .about-content .char img{
+            width: 100%;
+        }
+    
+        .about-content .char >*{
+            margin-top: 10px;
+        }
+    
+        .about-content .char h4{
+            opacity: 0.5;
+            line-height: 1.5;
+        }
+    
+        .about-content .char button{
+            width: 100%;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            transition: 0.5s;
+        }
+    
+        .about-content .char button:hover{
+        background-color:#ddd;
+        }
+    
+        /* contact */
+        .contact >*{
+            margin: 20px  8px;
+        }
+    
+        .contact form input{
+        width: 93%;
+        margin-top: 10px;
+        padding: 10px;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid gray;
+        }
+    
+        .contact button{
+        background-color: #000;
+        color: white;
+        font-size: 15px;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        }
+    
+        .contact button:hover{
+        background-color:#ccc;
+        color:#000;
+        transform: 2ss;
+        }
+    
+        /* map */
+        .map iframe{
+            width: 100%;
+            height: 100vh;
+        }
+    
+        /* footer */
+        footer{
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+            
+        }
+    
+        footer h5{
+            color: #fff;
+            bottom: 10px;
+        }
+    
+        footer a{
+            color: #fff;
+        }
+    
+        }
